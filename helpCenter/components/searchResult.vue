@@ -7,7 +7,7 @@
             <ul class="resultList">
                 <li v-for="(item,index) in resultList" :key="index">
                     <div class="question-title">
-                        <nuxt-link :to="`/bangzhu/`" ></nuxt-link>
+                        <nuxt-link :to="`/detail/${item.fId}`" v-html="filterSearchKey(item.fTitle)"></nuxt-link>
                     </div>
                     <div class="question-content" v-html="filterSearchKey(item.fContent)"></div>
                 </li>
@@ -30,7 +30,7 @@ export default {
     },
     data () {
         return {
-            pageSize:10, //每页显示的数据条数
+            pageSize:6, //每页显示的数据条数
             totalPageNums:1, //总页码数
             curPageNum:1,  // 当前页码数
         }
@@ -154,16 +154,24 @@ export default {
             .resultList{
                 padding-right: 85px;
                 li{
-                    padding:15px 0;
+                    padding:14px 0;
+                    // margin-bottom: 10px;
                     .question-title{
                         font-size:18px;
-                        padding-bottom: 16px;
-                        color:#3d9be9;
+                        padding-bottom: 10px;
+                        a{
+                            color:#3d9be9;
+                        }
                     }
-
                     .question-content{
                         font-size:12px;
+                        line-height: 22px;
+                        height:44px;
                         color:#666;
+                        -webkit-line-clamp: 2;
+                        overflow: hidden;
+                        word-break: break-all;
+                        text-overflow:ellipsis;
                     }
                 }
             }

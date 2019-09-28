@@ -154,7 +154,7 @@ export default {
         this.selftCurPageNum = this.curPageNum
     },
     mounted(){
-        console.log(this.paginationInfo,'mmmmmmmmmmmmm')
+        // console.log(this.paginationInfo,'mmmmmmmmmmmmm')
     }
    
 }

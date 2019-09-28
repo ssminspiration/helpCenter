@@ -4,7 +4,6 @@
             <ul>
                 <li class="question-title" v-for="(question,index) in dataList" :key="index">
                     <span class="circle"></span>
-                    <!-- <span>{{question.fTitle}}</span> -->
                     <nuxt-link :to="`/detail/${question.fId}`">{{question.fTitle}}</nuxt-link>
                 </li>
             </ul>
@@ -38,7 +37,7 @@ export default {
         }
     },
     mounted(){
-        console.log('%c问题列表','font-size:28px;color:red',this.dataList)
+        // console.log('%c问题列表','font-size:28px;color:red',this.dataList)
     }
     
 }

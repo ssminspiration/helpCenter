@@ -30,8 +30,6 @@ export default {
     data () {
         return {
             seletedThirdCategoryIndex:null,
-          
-            url:"/"             //路径
         }
     },
     computed:{
@@ -51,29 +49,14 @@ export default {
             this.seletedThirdCategoryIndex = index
         }
     },
-    beforeCreate:function(){},
-    created:function(){
-        if(process.client){
-            console.log('客户端created')
-            
-            if(!this.thirdId) {
-                this.seletedThirdCategoryIndex = 'all';
-                return;
-            }
-            const i = this.thirdCategoryList.findIndex((item,index)=>{
-                return item.fId == this.thirdId;
-            })
-           
-            this.seletedThirdCategoryIndex = i;
-            console.log('this.seletedThirdCategoryIndex',this.seletedThirdCategoryIndex)
-            
-        }else{
-            console.log('服务端created')
-        }
-        
-    },
     mounted:function(){
-        console.log('%c thirdCategoryCommon mounted','font-size:32px;color:green',this.thirdCategoryList,this.seletedThirdCategoryIndex)
+        if(!this.thirdId) {
+            return this.seletedThirdCategoryIndex = 'all';
+        }
+       
+        this.seletedThirdCategoryIndex = this.thirdCategoryList.findIndex((item,index) => 
+            item.fId == this.thirdId
+        )
     },
 }
 </script>

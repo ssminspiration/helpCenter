@@ -58,7 +58,7 @@ export default {
     },
     methods: {
         async openSecondCategoryList(item,index){
-            console.log('%c点击打开','font-size:44px;color:blue',item.secondCategoryList)
+            // console.log('%c点击打开','font-size:44px;color:blue',item.secondCategoryList)
 
             if(this.selectedFirstCategoryIndex == index) this.selectedFirstCategoryIndex = -1
             else this.selectedFirstCategoryIndex = index;
@@ -104,8 +104,8 @@ export default {
         }
     },
     mounted:function(){
-        console.log('%c一级类目','font-size:32px;color:red',this.firstCategoryList)
-        console.log('%c二级类目','font-size:32px;color:blue',this.selectedSecondCategoryList,this.selectedFirstCategoryIndex,this.firstId)
+        // console.log('%c一级类目','font-size:32px;color:red',this.firstCategoryList)
+        // console.log('%c二级类目','font-size:32px;color:blue',this.selectedSecondCategoryList,this.selectedFirstCategoryIndex,this.firstId)
     },
 }
 </script>

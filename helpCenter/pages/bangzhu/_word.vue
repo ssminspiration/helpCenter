@@ -1,10 +1,10 @@
 <template>
     <div class="zm-help-center-wrapper">
         <div class="zm-help-center-main">
-            <div class="left-content">
+            <!-- <div class="left-content">
                 <sidebar :firstCategoryList="firstCategoryList"></sidebar>
-            </div>
-            <div class="right-content content-detail">
+            </div> -->
+            <div class="content-detail">
                <!-- <h1>list page</h1> -->
                <search-result :count="count" :resultList="resultList" :keyWords="keyWords"></search-result>
             </div>
@@ -75,7 +75,9 @@ export default {
 
 <style scoped lang="less">
     .content-detail{
-        min-height:900px;
-        height:auto;
+        // min-height:900px;
+        height:900px;
+        background-color: #fff;
+        padding-left:44px;
     }
 </style>
