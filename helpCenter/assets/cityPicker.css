@@ -1,0 +1,79 @@
+.zm-citypicker {
+  position: absolute;
+  z-index: 11;
+  width: 280px;
+}
+.zm-citypicker .zm-citypickerBox {
+  width: 280px;
+  position: relative;
+  z-index: 11;
+}
+.zm-citypicker .zm-citypickerBox .zm-citypickerTab {
+  height: 35px;
+  background: #fff;
+  box-sizing: border-box;
+  display: flex;
+}
+.zm-citypicker .zm-citypickerBox .zm-citypickerTab li {
+  padding: 7px 0;
+  text-align: center;
+  width: 25%;
+  color: #0C1F2F;
+  font: 400 12px/1.6 arial, sans-serif;
+  border: 1px solid #b1d7f6;
+  margin-right: 1px;
+  border-bottom: none;
+  cursor: pointer;
+  flex: 1;
+}
+.zm-citypicker .zm-citypickerBox .zm-citypickerTab li.current {
+  background: #fff;
+  background-color: #c4e1f8;
+}
+.zm-citypicker .zm-citypickerBox .zm-citypickerTab li:last-child {
+  margin-right: 0;
+}
+.zm-citypicker .zm-citypickerBox .zm-citypickerCont {
+  border: 1px #b1d7f6 solid;
+  padding: 10px 15px;
+  background: #fff;
+  font-size: 12px;
+}
+.zm-citypicker .zm-citypickerBox .zm-citypickerCont dl {
+  line-height: 2;
+  clear: both;
+  padding: 3px 0;
+  margin: 0;
+  overflow: hidden;
+}
+.zm-citypicker .zm-citypickerBox .zm-citypickerCont dl dt {
+  display: inline-block;
+  float: left;
+  padding-right: 10px;
+  font-weight: 700;
+  color: #CC0066;
+}
+.zm-citypicker .zm-citypickerBox .zm-citypickerCont dl dd {
+  display: inline;
+  float: left;
+  margin-left: 0;
+}
+.zm-citypicker .zm-citypickerBox .zm-citypickerCont dl dd a {
+  display: block;
+  float: left;
+  color: #0C1F2F;
+  padding: 0 10px;
+  text-decoration: none;
+  margin-right: 2px;
+  border-radius: 2px;
+}
+.zm-citypicker .zm-citypickerBox .zm-citypickerCont dl dd a:hover {
+  background-color: #D8EBFB;
+}
+.zm-citypicker .zm-citypickerBox .zm-citypickerCont dl dd a.active {
+  background-color: #c4e1f8;
+  color: #fff;
+}
+.zm-citypicker .zm-citypickerBox .zm-citypickerCont dl dd span {
+  color: #ccc;
+}
